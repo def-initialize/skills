@@ -110,7 +110,8 @@ struct Rows: View {
             .foregroundStyle(white ? AnyShapeStyle(.white) : AnyShapeStyle(.primary))
     }
 
-    /// Two glyphs on one interactive glass capsule, each button `side` pt square.
+    /// Two glyphs on one interactive glass capsule, each label `side` pt square. The style adds its own
+    /// padding: with `.plain` the buttons are `side` pt square, with `.accessoryBar` 24 pt wider and 8 pt taller.
     private func capsule(_ style: some PrimitiveButtonStyle, side: CGFloat) -> some View {
         HStack(spacing: 0) {
             Button {} label: { glyph("hand.thumbsup", size: 16).frame(width: side, height: side).contentShape(.rect) }
