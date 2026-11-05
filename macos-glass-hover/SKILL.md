@@ -1,6 +1,9 @@
 ---
 name: macos-glass-hover
 description: Make SwiftUI Liquid Glass buttons in a native macOS 26+ app light up under the pointer (mouse-over), as Apple's apps do, without losing a tint or the layout. Use when glass buttons on the Mac don't react to hover, when asked to add a hover highlight or hover effect to Mac glass buttons or to a glass capsule holding several buttons (Safari-style), or when a tinted glass button turns plain after changing its style. Not for iOS, iPadOS, visionOS or Mac Catalyst (they have hoverEffect), and not for buttons without Liquid Glass.
+metadata:
+  version: "1.0"
+  updated: "2026-11-05"
 ---
 
 # Hover on Liquid Glass buttons (macOS)
@@ -127,7 +130,7 @@ func glyph(_ name: String) -> some View {   // a member of the same view
 ## How to verify
 
 1. Run the harness to compare the variants on this machine:
-   `sh ~/.claude/skills/macos-glass-hover/harness/run.sh` (or wherever this skill is installed). It
+   `sh <this skill's folder>/harness/run.sh`, for example `sh .claude/skills/macos-glass-hover/harness/run.sh` from the root of a repository that has it (Claude Code shows the folder when the skill loads). It
    builds `HoverLab.swift` into `$TMPDIR/hoverlab/HoverLab.app`, quits any running HoverLab, and opens
    a window with each variant over a light and a dark backdrop, numbered and labelled.
 2. Measure sizes in points: from a computer-use screenshot's element summary, with Accessibility
